@@ -27,7 +27,7 @@ request_post:
 
 calculator_add:
   path: /add/{param1}/{param2}/
-  defaults: { _controller: AppBundle:Calculator:add }
+  defaults: { _controller: MyApp\Bundle\AppBundle\Controller\AddController::executeAction }
   methods: [POST]
   requirements:
     param1: '\d+'
@@ -35,19 +35,19 @@ calculator_add:
 
 calculator_subtract:
   path: /subtract/{param1}/
-  defaults: { _controller: AppBundle:Calculator:subtract }
+  defaults: { _controller: MyApp\Bundle\AppBundle\Controller\SubtractController::executeAction }
   methods: [POST]
   requirements:
     param1: '\d+'
 
 calculator_multiply:
   path: /multiply/
-  defaults: { _controller: AppBundle:Calculator:multiply }
+  defaults: { _controller: MyApp\Bundle\AppBundle\Controller\MultiplyController::executeAction }
   methods: [POST]
 
 calculator_divide:
   path: /divide/{param1}/{param2}/
-  defaults: { _controller: AppBundle:Calculator:divide }
+  defaults: { _controller: MyApp\Bundle\AppBundle\Controller\DivideController::executeAction }
   methods: [GET]
   requirements:
     param1: '\d+'
